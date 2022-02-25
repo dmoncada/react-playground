@@ -3,17 +3,15 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import "./scss/app.scss";
 
-class HelloMessage extends React.Component {
-  render() {
+const HelloMessage = (props: any) => {
     return (
-      <div>
-        <Header />
-        <div className="container">
-          <h1>Hello {this.props.name}</h1>
-        </div>
-      </div>
+        <>
+            <Header />
+            <div className="container">
+                <h1>Hello {props.name}</h1>
+            </div>
+        </>
     );
-  }
 }
 
 let App = document.getElementById("app");
